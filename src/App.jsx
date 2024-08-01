@@ -1,7 +1,8 @@
+import FarmEconomics from "./components/Farm/FarmEconomics";
 const App =()=>{
   return(
     <>
-   <h1 className="container">hii</h1>
+    <FarmEconomics/>
     </>
   )
 }
