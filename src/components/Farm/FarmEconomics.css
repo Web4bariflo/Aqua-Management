@@ -1,0 +1,19 @@
+
+.btn-light {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #f8f9fa; /* Adjust to desired hover color */
+  color: #495057; 
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
