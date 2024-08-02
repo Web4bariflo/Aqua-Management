@@ -1,0 +1,23 @@
+
+.button-group {
+  display: flex;
+  gap: 80px; 
+}
+
+.btn-custom {
+ 
+  padding: 5px 40px;
+  border-radius: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+  background-color: #f7e9e9;
+  
+}
+
+.btn-custom:focus {
+  background-color: #e0e0e0;
+  outline: none;
+}
+
