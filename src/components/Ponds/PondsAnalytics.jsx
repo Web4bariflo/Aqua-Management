@@ -15,7 +15,7 @@ const PondsAnalytics = () => {
 
     const remoteSensingData = {
         coloredDissolvedOrganicMatter: [20, 35, 40, 45, 50, 55, 60],
-        totalSuspendedSolid: [25, 30, 35, 40, 45, 50, 55],  
+        totalSuspendedSolid: [25, 30, 35, 40, 45, 50, 55],
         phytoplanktonChlorophyll: [30, 40, 50, 60, 69, 65, 25],
         sunInducedChlorophyllFluorescence: [15, 20, 25, 30, 35, 40, 45],
         phycocyanin: [10, 20, 30, 40, 50, 60, 65],
@@ -53,13 +53,13 @@ const PondsAnalytics = () => {
             min: 0,
             max: 69,
             tickAmount: 10,
-           labels: {
-            formatter: (value) => Math.round(value),
-            style: {
-                colors: ['#000'],
-                fontSize: '10px'
-            }
-        },
+            labels: {
+                formatter: (value) => Math.round(value),
+                style: {
+                    colors: ['#000'],
+                    fontSize: '10px'
+                }
+            },
             axisBorder: {
                 show: true,
                 color: '#000',
@@ -109,11 +109,19 @@ const PondsAnalytics = () => {
             <div className="col-12 col-md-6 mb-4" key={index}>
                 <div className="card" style={cardStyle}>
                     <div className="card-body">
+                        <div className="d-flex justify-content-between align-items-center">
+                            <div className="card-title" style={{ fontSize: '14px', fontWeight: 'bold' }}>{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                            <div className="dropdown">
+                                <select className="form-select small-dropdown" style={{ width: '90px' }}>
+                                    <option value="7">7 Days</option>
+                                    <option value="14">14 Days</option>
+                                    <option value="21">21 Days</option>
+                                    <option value="30">30 Days</option>
+                                </select>
+                            </div>
+                        </div>
                         <ReactApexChart
-                            options={{ 
-                                ...commonOptions, 
-                                title: { text: key.replace(/([A-Z])/g, ' $1').trim() } 
-                            }}
+                            options={commonOptions}
                             series={[{ data: data[key] }]}
                             type="bar"
                             height={300}

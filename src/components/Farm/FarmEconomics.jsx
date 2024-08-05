@@ -134,46 +134,22 @@ const FarmEconomics = () => {
 
   return (
     <div className="container-fluid mt-4">
-      <div className="row justify-content-around flex-wrap">
-        <div className="col-auto">
-          <div className="card" style={{ width: "267px", height: "281px" }}>
-            <img
-              className="card-img-top"
-              src="./images/Farm1.jpg"
-              alt="Farm-1"
-              style={{ width: "100%", height: "220%", objectFit: "cover" }}
-            />
-            <div className="card-body d-flex justify-content-center align-items-center" style={{ height: "40%" }}>
-              <h5 className="card-title text-center">Farm-1</h5>
+      <div className="row">
+        {["Farm-1", "Farm-2", "Farm-3"].map((farm, index) => (
+          <div key={index} className="col-md-4 mb-4 d-flex justify-content-center">
+            <div className="card" style={{ width: "267px", height: "281px" }}>
+              <img
+                className="card-img-top"
+                src="./images/Farm1.jpg"
+                alt={farm}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <div className="card-body d-flex justify-content-center align-items-center" style={{ height: "20%" }}>
+                <h5 className="card-title text-center">{farm}</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-auto">
-          <div className="card" style={{ width: "267px", height: "281px" }}>
-            <img
-              className="card-img-top"
-              src="./images/Farm1.jpg"
-              alt="Farm-2"
-              style={{ width: "100%", height: "220%", objectFit: "cover" }}
-            />
-            <div className="card-body d-flex justify-content-center align-items-center" style={{ height: "40%" }}>
-              <h5 className="card-title text-center">Farm-2</h5>
-            </div>
-          </div>
-        </div>
-        <div className="col-auto">
-          <div className="card" style={{ width: "267px", height: "281px" }}>
-            <img
-              className="card-img-top"
-              src="./images/Farm1.jpg"
-              alt="Farm-3"
-              style={{ width: "100%", height: "220%", objectFit: "cover" }}
-            />
-            <div className="card-body d-flex justify-content-center align-items-center" style={{ height: "40%" }}>
-              <h5 className="card-title text-center">Farm-3</h5>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="row mt-4">
         <div className="col">

@@ -10,29 +10,30 @@
 }
 
 .image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(311px, 1fr));
+  gap: 10px;
+  justify-items: center;
 }
 
 .image-card {
-  width: 311px; 
-  margin: 10px;
   text-align: center;
-  
 }
 
 .image-card img {
-  width: 311px; 
-  height: 253px; 
-  object-fit: cover; 
+  width: 311px;
+  height: 253px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .image-card p {
   font-size: 14px;
-  color: #110101; 
-  margin-top: 8px; 
-  margin-bottom: 0; 
-  
+  color: #110101;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.small-dropdown {
+  font-size: 12px;
 }
